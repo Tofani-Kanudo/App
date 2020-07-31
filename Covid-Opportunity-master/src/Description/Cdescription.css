@@ -1,0 +1,439 @@
+.description {
+  margin: 0px 11% 2% 11%;
+  display: flex;
+  flex-direction: column;
+}
+.description-logo {
+  align-self: center;
+  width: 140px;
+  height: 140px;
+  margin-top: 5px;
+}
+
+.description-logos {
+  position: absolute;
+  top: 105px;
+  left: 13%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+}
+/* 
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+} */
+.description-header {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 65px;
+  line-height: 80px;
+  font-weight: bold;
+  margin-top: 0px;
+}
+.description-subheader {
+  font-size: 30px;
+  line-height: 25px;
+  margin-top: 10px;
+
+  text-align: center;
+  letter-spacing: -0.05em;
+}
+.description-body {
+  margin-top: 38px;
+  margin-bottom: 0px;
+  text-align: center;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  line-height: 33px;
+  font-weight: 400;
+
+  letter-spacing: -0.03rem;
+
+  color: #212529;
+}
+.tag-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 20px 0 20px 0;
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  width: 60%;
+  justify-content: center;
+  margin: 12px 20% 10px 20%;
+}
+.tag {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin: 45px 0 0px 10px;
+}
+
+.tag-chip {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  margin-bottom: 10px;
+  margin-right: 1px;
+  font-size: 1rem;
+}
+.tag-chips {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  margin-bottom: 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  margin-right: 5px;
+}
+.button-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 50%;
+  margin: 20px 25% 20px 25%;
+}
+.description-button {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: 50px;
+  padding: 10px;
+  margin: 0px 15% 20px 15%;
+  background-color: #e8505b;
+
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: white;
+  border-radius: 2px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 550;
+}
+.description-button1 {
+  background-color: #4f51c0;
+}
+.description-button:hover {
+  box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.2);
+  opacity: 0.9;
+}
+.mobile-description {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+}
+.description-mainellipse {
+  position: absolute;
+  top: -130px;
+  left: -10px;
+}
+
+.description-top-blue {
+  position: absolute;
+  border-radius: 19px;
+  top: 155px;
+  width: 84%;
+  margin: 0 10% 0 -1px;
+  height: 120px;
+  background-color: #4f51c0;
+}
+
+.blue-yellow-pink {
+  position: absolute;
+  top: -110px;
+  right: -80px;
+}
+.mobile-description-button {
+  border-radius: 19px;
+  height: 55px;
+  width: 80%;
+  display: flex;
+  cursor: pointer;
+  margin: 0 10% 0 10%;
+  background-color: #4f51c0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+
+  color: white;
+  margin-bottom: 25px;
+}
+
+.mobile-description-button-1 {
+  border-radius: 19px;
+  height: 55px;
+  width: 80%;
+  display: flex;
+  cursor: pointer;
+  margin: 0 10% 0 10%;
+  background-color: #4f51c0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+
+  color: white;
+}
+
+.descriptions-logo {
+  position: absolute;
+  top: 75px;
+  left: 15%;
+  width: 80px;
+  height: 80px;
+}
+
+.mobile-company-description {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  line-height: 1.5;
+
+  font-weight: 400;
+  margin: 25px 5% 10px 5%;
+  color: #212529;
+  width: 90%;
+  font-size: 1.2rem;
+}
+
+.button-logo {
+  border-radius: 19px 0 0 19px;
+  background-color: #fee9ce;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.button-logo img {
+  height: 55px;
+  width: 55px;
+}
+.button-value {
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+}
+.company-description {
+  margin-top: 38px;
+  margin-left: 11%;
+  display: flex;
+  flex-direction: column;
+}
+.des-button-wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 45px;
+  margin-bottom: 35px;
+  width: 100%;
+  flex-direction: column;
+}
+.des-button-wrappers {
+  position: relative;
+  display: flex;
+  width: 40%;
+  margin: 45px 30% 45px 30%;
+  flex-direction: column;
+}
+.tag-heading {
+  margin-top: 45px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: 5%;
+}
+.mainellipse {
+  max-width: 100%;
+  top: -78px;
+  position: relative;
+}
+
+.blue-yellow-pink {
+  position: absolute;
+  top: -120px;
+  right: -70px;
+}
+
+.header {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  max-height: 300px;
+  position: relative;
+}
+
+.back-button {
+  position: absolute;
+  top: 30px;
+  left: 20px;
+  cursor: pointer;
+}
+.body {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+
+.footer {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  max-height: 300px;
+  position: relative;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.main {
+  font-size: 20px;
+  padding-right: 20px;
+  text-align: justify;
+  font-family: "Roboto";
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: 400;
+  line-height: 1.3;
+  letter-spacing: -0.05rem;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 126.4%;
+
+  line-height: 141.19%;
+  color: #000000;
+  text-align: left;
+}
+
+.description-svg img {
+  width: 30vw;
+  padding-right: 8vw;
+}
+
+.description-location {
+  font-size: 23px;
+  font-family: "Roboto";
+  margin-bottom: 10px;
+  font-weight: 500;
+  letter-spacing: -0.03rem;
+}
+.description-tag-container {
+  margin: 100px 0;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.description-tag-wrapper {
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.description-tags {
+  white-space: nowrap;
+
+  padding: 0 25px;
+  height: 30px;
+
+  color: #314b7f;
+  background-color: #c8d3e9;
+  align-items: center;
+  display: flex;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 4px;
+  padding: 3px 5px;
+  font-family: inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu,
+    Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, segoe ui, Roboto,
+    Helvetica, Arial, apple color emoji, segoe ui emoji, segoe ui symbol,
+    sans-serif;
+}
+.header_logo {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+.heading {
+  font-size: 52px;
+  font-family: "Roboto";
+  font-weight: 700;
+  letter-spacing: -0.1px;
+}
+.description-chip {
+  padding: 10px;
+  border-radius: 20px;
+  background-color: #f6f6f6;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  font-size: 1rem;
+  color: black;
+  font-family: "Roboto";
+  font-weight: 480;
+}
+.description-logos img {
+  width: 70px;
+  height: 70px;
+  border-radius: 25px;
+}
+.description-svg {
+  margin-left: 4vw;
+  padding-right: 0;
+  margin-right: 10vw;
+}
+
+.company-description-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+.modals {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 150%;
+  overflow: visible;
+  color: black;
+  background-color: white;
+  overflow-y: hidden;
+
+  display: none;
+}
+.modal-heading {
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;
+  color: black;
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 500;
+}
+.modal-subheading {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 18px;
+  line-height: 1.4;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.description-modal-button {
+  width: 30%;
+  margin: 0px 35% 20px 35%;
+  height: 60px;
+  background-color: blue;
+  align-self: center;
+}

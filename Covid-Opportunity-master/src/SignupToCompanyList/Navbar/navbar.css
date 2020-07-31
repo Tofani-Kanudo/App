@@ -1,0 +1,22 @@
+.nav-item {
+  display: block;
+  padding: 18px 24px;
+  color: #ffff;
+  text-decoration: none;
+  cursor: pointer;
+  height: 58px;
+}
+
+.nav-item:hover {
+  background-color: #262a2e;
+}
+
+.navbar-nav {
+  margin-right: 10px;
+}
+
+.navbar {
+  height: 50px;
+
+  z-index: 1;
+}
