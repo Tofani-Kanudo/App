@@ -1,0 +1,140 @@
+#ima {
+    width: 950px;
+    height: 750px;
+    position: absolute;
+    z-index: -1;
+    top: 38px;
+    right: -135px;
+    padding: 20px;
+    opacity: 0.8;
+  }
+
+  #ima1 {
+    width: 950px;
+    height: 750px;
+    position: absolute;
+    z-index: -1;
+    top: 38px;
+    right: -60px;
+    padding: 20px;
+    opacity: 0.8;
+  }
+
+  
+  #ima2 {
+    /* width: 950px;
+    height: 750px; */
+    position: absolute;
+    z-index: -1;
+    top: 750px;
+    left: -20px;
+    padding: 20px;
+    opacity: 0.8;
+  }
+  
+.texta {
+    /* text-align: center; */
+    position: absolute;
+    left: 20%;
+    top: 30%;
+    color: black;
+    /* font-weight: bold; */
+  }
+.texta span{
+    text-align: left;
+    font-weight: bold;
+    font-size: larger;
+}
+.texta h2{
+    font-weight: bolder;
+}
+
+.texta1 {
+    text-align: center;
+    position: absolute;
+    left: 30%;
+    top: 90%;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+  }
+  
+#ima3{
+    /* width: 950px;
+    height: 750px; */
+    position: absolute;
+    z-index: -1;
+    top: 1100px;
+    left: 30px;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+#ima4{
+    /* width: 950px;
+    height: 750px; */
+    position: absolute;
+    z-index: -1;
+    top: 1300px;
+    right: -40px;
+    padding: 20px;
+    opacity: 0.8;
+}
+#ima5{
+    /* width: 950px;
+    height: 750px; */
+    position: absolute;
+    z-index: -1;
+    top: 1700px;
+    right: -40px;
+    padding: 20px;
+    opacity: 0.8;
+}
+#ima6{
+    /* width: 950px;
+    height: 750px; */
+    position: absolute;
+    z-index: -1;
+    bottom: -1250px;
+    left: -35px;
+    padding: 20px;
+    opacity: 0.8;
+}
+
+#Ellipse_3,#Path_71{
+    mix-blend-mode: multiply;
+    isolation: isolate;
+}
+
+.texta2{
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: 130%;
+    color: black;
+    /* font-weight: bold; */
+    font-size: large;
+}
+.texta3{
+    text-align: left;
+    position: absolute;
+    left: 10%;
+    top: 190%;
+    color: black;
+    /* font-weight: bold; */
+    font-size: large;
+}
+
+#tit{
+    font-weight: bolder;
+}
+
+.texta4{
+    text-align: center;
+    position: absolute;
+    left: 35%;
+    top: 220%;
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+}

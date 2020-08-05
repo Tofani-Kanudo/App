@@ -15,6 +15,7 @@ import CompanyProject from "./CompanyProjects/companyProjects";
 import ProjectDescription from "./ProjectDescription/projectDescription";
 import CompanyDescription from "./Description/CompanyDescription";
 import ForgotPassword from "./ForgotPassword/forgotPassword";
+import Home from "./Landing/home";
 
 import User from "./Userregistration/User";
 import Usernext from "./Userregistration/Usernext";
@@ -35,7 +36,7 @@ class App extends Component {
               {this.props.tokenReducer ? (
                 <Redirect to="/companyList" />
               ) : (
-                <Login />
+                <Home />
               )}
             </Route>
             <Route path="/signup" component={Signup}></Route>
