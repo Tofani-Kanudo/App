@@ -16,7 +16,6 @@ import ProjectDescription from "./ProjectDescription/projectDescription";
 import CompanyDescription from "./Description/CompanyDescription";
 import ForgotPassword from "./ForgotPassword/forgotPassword";
 import Home from "./Landing/home";
-import Update from "./Update Page/Update";
 import User from "./Userregistration/User";
 import Usernext from "./Userregistration/Usernext";
 import Interview from "./Interview/Interview";
@@ -51,7 +50,6 @@ class App extends Component {
             <Route path="/user1" component={User}></Route>
             <Route path="/demo" component={Demo}></Route>
             <Route path="/user2" component={Usernext}></Route>
-            <Route path="/update" component={Update}></Route>
             <Route path="/companyList" component={CompanyList}></Route>
             <Route path="/description" component={CompanyDescription}></Route>
 
