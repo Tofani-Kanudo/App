@@ -70,7 +70,7 @@ class Navbar extends Component {
                     color: "white",
                     marginLeft: 0,
                   }}
-                  to="/companyList"
+                  to="/"
                 >
                   COVID Opportunities
                 </Link>
@@ -109,17 +109,16 @@ class Navbar extends Component {
               </li>
               <li
                 onClick={() => {
-                  Axios.get("http://scholarly-api.herokuapp.com/api/logout")
-                    .then((res) => {
-                      console.log(res);
-                      localStorage.removeItem("token");
+                  // Axios.get("http://localhost:8000/api/logout")
+                  //   .then((res) => {
+                      // console.log(res);
+                      localStorage.clear("token");
                       this.props.tokenAuth(localStorage.getItem("token"));
-
-                      this.props.history.push("/login");
-                    })
-                    .catch((error) => {
-                      console.log(error);
-                    });
+                      this.props.history.push("/");
+                    // })
+                    // .catch((error) => {
+                    //   console.log(error);
+                    // });
                 }}
                 class="nav-item"
               >
@@ -141,7 +140,7 @@ class Navbar extends Component {
                     color: "white",
                     marginLeft: 0,
                   }}
-                  to="/companyList"
+                  to="/"
                 >
                   COVID Opportunities
                 </Link>
@@ -189,7 +188,7 @@ class Navbar extends Component {
                     color: "white",
                     marginLeft: 0,
                   }}
-                  to="/companyList"
+                  to="/"
                 >
                   COVID Opportunities
                 </Link>
@@ -234,7 +233,7 @@ class Navbar extends Component {
                     color: "white",
                     marginLeft: 0,
                   }}
-                  to="/companyList"
+                  to="/"
                 >
                   COVID Opportunities
                 </Link>
@@ -292,7 +291,7 @@ class Navbar extends Component {
           </li>
           <li
             onClick={() => {
-              Axios.get("http://scholarly-api.herokuapp.com/api/logout")
+              Axios.get("http://localhost:8000/api/logout")
                 .then((res) => {
                   console.log(res);
                   localStorage.removeItem("token");
