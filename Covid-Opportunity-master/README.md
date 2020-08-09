@@ -1,2 +1,2 @@
 This Project is Under Development.<br/>
-**Hosted at :** https://murmuring-ocean-33870.herokuapp.com/
+**Hosted at :** http://whispering-spire-24600.herokuapp.com/
