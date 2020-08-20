@@ -121,7 +121,7 @@ class Navbar extends Component {
               
                 onClick={() => {
                   const token = localStorage.getItem("token");
-                  Axios.get("https://morning-plateau-86103.herokuapp.com/api/logout/", {
+                  Axios.get("https://api.covid-careers.com/api/logout/", {
                     headers: { Authorization: `JWT ${token}` },
                   })
                     .then((res) => {
@@ -319,7 +319,7 @@ class Navbar extends Component {
           
             onClick={() => {
               const token = localStorage.getItem("token");
-              Axios.get("https://morning-plateau-86103.herokuapp.com/api/logout/", {
+              Axios.get("https://api.covid-careers.com/api/logout/", {
                 headers: { Authorization: `JWT ${token}` },
               })
                 .then((res) => {

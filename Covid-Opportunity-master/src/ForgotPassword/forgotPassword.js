@@ -9,7 +9,7 @@ const ForgotPassword =()=>{
     }
     const submitForm=(e)=>{
         //add url
-        axios.post("https://morning-plateau-86103.herokuapp.com/api/password/reset/",
+        axios.post("https://api.covid-careers.com/api/password/reset/",
             {
                 email: enterEmail,
             }

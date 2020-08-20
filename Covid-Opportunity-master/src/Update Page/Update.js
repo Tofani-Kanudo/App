@@ -31,7 +31,7 @@ class Update extends Component {
   };
   componentDidMount() {
     const token = localStorage.getItem("token");
-    axios.get("https://morning-plateau-86103.herokuapp.com/accounts/dummy/id/", {
+    axios.get("https://api.covid-careers.com/accounts/dummy/id/", {
         headers: { Authorization: `JWT ${token}` },
       })
       .then((res) => {
@@ -126,7 +126,7 @@ class Update extends Component {
       end_date,
     }=this.state;
     let token = localStorage.getItem("token");
-    axios.post(`https://morning-plateau-86103.herokuapp.com/accounts/dummy/profile/`,
+    axios.post(`https://api.covid-careers.com/accounts/dummy/profile/`,
     {
       city,
       location: location,

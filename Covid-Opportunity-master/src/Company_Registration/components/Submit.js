@@ -22,7 +22,7 @@ const Submit = (props) => {
     var token = localStorage.getItem("token");
     axios
       .post(
-        "https://morning-plateau-86103.herokuapp.com/company/",
+        "https://api.covid-careers.com/company/",
         {
           company_name: companyReducer,
           company_logo: logoReducer,

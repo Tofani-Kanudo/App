@@ -180,7 +180,7 @@ class Form extends Component {
   componentDidMount() {
     const token = localStorage.getItem("token");
     axios
-      .get("https://morning-plateau-86103.herokuapp.com/accounts/dummy/id", {
+      .get("https://api.covid-careers.com/accounts/dummy/id", {
         headers: { Authorization: `JWT ${token}` },
       })
       .then((res) => {

@@ -49,7 +49,7 @@ class Navbar extends Component {
               class="btn btn-outline-info my-2 my-sm-0"
               id="logout"
               onClick={() => {
-                Axios.get("https://morning-plateau-86103.herokuapp.com/api/logout")
+                Axios.get("https://api.covid-careers.com/api/logout")
                   .then((res) => {
                     console.log(res);
                     localStorage.removeItem("token");

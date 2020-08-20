@@ -98,7 +98,7 @@ class Signup extends Component {
       console.log(this.state.phone);
       // add registration api url
       axios
-        .post("https://morning-plateau-86103.herokuapp.com/api/registration/", {
+        .post("https://api.covid-careers.com/api/registration/", {
           full_name: this.state.name,
           email: this.state.email,
           phone_number: this.state.phone,
@@ -106,7 +106,7 @@ class Signup extends Component {
         })
         .then((res) => {
           // redirect to Updating page
-          axios.post("https://morning-plateau-86103.herokuapp.com/api/login/", {
+          axios.post("https://api.covid-careers.com/api/login/", {
         email: this.state.email,
         password: this.state.password,
       })
@@ -118,7 +118,7 @@ class Signup extends Component {
         // this.props.history.push("/");
       })
       .catch((err) => {
-        axios.post("https://morning-plateau-86103.herokuapp.com/api/token/", {
+        axios.post("https://api.covid-careers.com/api/token/", {
         email: this.state.email,
         password: this.state.password,
       })

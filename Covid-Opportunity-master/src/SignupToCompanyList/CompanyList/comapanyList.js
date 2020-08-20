@@ -213,7 +213,7 @@ class CompanyList extends Component {
     var token = localStorage.getItem("token");
     // console.log(token)
     axios
-      .get("https://morning-plateau-86103.herokuapp.com/company-list", {
+      .get("https://api.covid-careers.com/company-list", {
         headers: { Authorization: `JWT ${token}` },
       })
       .then((res) => {
