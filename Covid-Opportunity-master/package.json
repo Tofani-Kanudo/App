@@ -17,11 +17,11 @@
     "react-bootstrap": "^1.2.2",
     "react-dom": "^16.13.1",
     "react-intl-tel-input": "^8.0.4",
+    "react-phone-input-2": "2.13.7",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.1",
-    "redux": "^4.0.5",
-    "react-phone-input-2": "2.13.7"
+    "react-scripts": "^3.4.3",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,11 +30,11 @@
     "eject": "react-scripts eject"
   },
   "engines": {
-  "name": "myapp",
-  "description": "a really cool app",
-  "version": "1.0.0",
-  "engines": {
-    "node": "12.x"
+    "name": "myapp",
+    "description": "a really cool app",
+    "version": "1.0.0",
+    "engines": {
+      "node": "12.x"
     }
   },
   "eslintConfig": {
