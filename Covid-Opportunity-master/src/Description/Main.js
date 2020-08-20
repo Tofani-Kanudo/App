@@ -25,6 +25,7 @@ class Main extends Component {
               <div
                 onClick={() => {
                   $("#modal").slideToggle("slow");
+                  $("#navbarSupportedContent").slideToggle("slow");
                   window.scrollTo(0, 0);
                 }}
                 className="description-button"

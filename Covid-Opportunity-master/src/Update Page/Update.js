@@ -55,23 +55,23 @@ class Update extends Component {
       if (event.keyCode === 13) {
         event.preventDefault();
         let array = this.state.skillArray;
-        array.push(event.target.defaultValue);
+        array.push(event.target.value);
         this.setState({ skillArray: array });
-        event.target.defaultValue = "";
+        event.target.value = "";
         $("#add_skill").hide();
       }
     });
   }
 
   renderSkills() {
-    return this.state.skillArray.map((defaultValue) => {
+    return this.state.skillArray.map((value) => {
       return (
         <div className="application-tag-container">
           <div className="application-tags">
-            {defaultValue}
+            {value}
             <span
               style={{ marginLeft: 4, cursor: "pointer" }}
-              id={`btn_${defaultValue}`}
+              id={`btn_${value}`}
               onClick={(e) => {
                 let element = document.getElementById(e.target.id);
 
@@ -87,14 +87,14 @@ class Update extends Component {
   }
 
   renderEducation() {
-    return this.state.skillArray.map((defaultValue) => {
+    return this.state.skillArray.map((value) => {
       return (
         <div className="application-tag-container">
           <div className="application-tags">
-            {defaultValue}
+            {value}
             <span
               style={{ marginLeft: 4, cursor: "pointer" }}
-              id={`btn_${defaultValue}`}
+              id={`btn_${value}`}
               onClick={(e) => {
                 let element = document.getElementById(e.target.id);
 
@@ -126,7 +126,7 @@ class Update extends Component {
       end_date,
     }=this.state;
     let token = localStorage.getItem("token");
-    axios.post(`https://scholarly-science.herokuapp.com/accounts/dummy/profile/`,
+    axios.post(`https://morning-plateau-86103.herokuapp.com/accounts/dummy/profile/`,
     {
       city,
       location: location,

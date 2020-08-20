@@ -53,7 +53,7 @@ class Navbar extends Component {
             left: 0,
             height: 58,
             width: "100%",
-            backgroundColor:"#F6F6FA",
+            backgroundColor:"white",
             // marginBottom: "25px"
             // boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
           }}
@@ -188,7 +188,7 @@ class Navbar extends Component {
             left: 0,
             height: 58,
             width: "100%",
-            backgroundColor:"#F6F6FA"
+            backgroundColor:"white"
             // boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
           }}
         >

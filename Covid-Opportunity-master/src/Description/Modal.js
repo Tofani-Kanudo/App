@@ -7,6 +7,7 @@ const Modal = () => {
       <div
         onClick={() => {
           $("#modal").slideToggle("slow");
+        $("#navbarSupportedContent").slideToggle("slow");
         }}
         style={{
           position: "absolute",
