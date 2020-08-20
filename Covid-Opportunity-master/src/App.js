@@ -16,6 +16,7 @@ import ProjectDescription from "./ProjectDescription/projectDescription";
 import CompanyDescription from "./Description/CompanyDescription";
 import ForgotPassword from "./ForgotPassword/forgotPassword";
 import Home from "./Landing/home";
+import Update from "./Update Page/Update";
 import User from "./Userregistration/User";
 import Usernext from "./Userregistration/Usernext";
 import Interview from "./Interview/Interview";
@@ -29,7 +30,6 @@ class App extends Component {
     return (
       <BrowserRouter>
         <div className="App">
-          <Navbar />
           <Switch>
             <Route exact path="/">
               {localStorage.getItem("token")!=null ? (
@@ -40,25 +40,55 @@ class App extends Component {
             </Route>
             <Route path="/signup" component={Signup}></Route>
             <Route path="/login" component={Login}></Route>
-            <Route path="/assignmentKey" component={ForgotPassword}></Route>
-            <Route path="/thankyou" component={ThankYouLayout}></Route>
-            <Route path="/interview" component={Interview}></Route>
+            <Route path="/assignmentKey" >
+              <Navbar /><ForgotPassword/>
+              </Route>
+            <Route path="/thankyou" >
+              <Navbar /><ThankYouLayout/>
+              </Route>
+            <Route path="/interview" >
+              <Navbar /><Interview/>
+              </Route>
 
-            <Route path="/admin" component={Registration}></Route>
-            <Route path="/dreamjob" component={DreamJob}></Route>
-            <Route path="/opening" component={Opening}></Route>
-            <Route path="/user1" component={User}></Route>
-            <Route path="/demo" component={Demo}></Route>
-            <Route path="/user2" component={Usernext}></Route>
-            <Route path="/companyList" component={CompanyList}></Route>
-            <Route path="/description" component={CompanyDescription}></Route>
+            <Route path="/admin" >
+              <Navbar /><Registration/>
+              </Route>
+            <Route path="/dreamjob" >
+              <Navbar /><DreamJob/>
+              </Route>
+            <Route path="/opening" >
+              <Navbar /><Opening/>
+              </Route>
+            <Route path="/user1" >
+              <Navbar /><User/>
+              </Route>
+            <Route path="/demo" >
+              <Navbar /><Demo/>
+              </Route>
+            <Route path="/user2" >
+              <Navbar /><Usernext/>
+              </Route>
+            <Route path="/update" >
+              <Update/>
+              </Route>
+            <Route path="/profile">
+                <Navbar/><Update/>
+            </Route>
+            <Route path="/companyList" >
+              <Navbar /><CompanyList/>
+              </Route>
+            <Route path="/description" >
+              <Navbar /><CompanyDescription/>
+              </Route>
 
-            <Route exact path="/project" component={CompanyProject}></Route>
+            <Route exact path="/project" >
+              <Navbar /><CompanyProject/>
+              </Route>
             <Route
               exact
-              path="/project/:id"
-              component={ProjectDescription}
-            ></Route>
+              path="/project/:id">
+                <Navbar /><ProjectDescription/>
+              </Route>
           </Switch>
         </div>
       </BrowserRouter>
