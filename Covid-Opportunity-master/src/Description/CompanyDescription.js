@@ -14,7 +14,7 @@ function CompanyDescription(props) {
           <div
             className="back-button"
             onClick={() => {
-              props.history.push("/companyList");
+              window.history.back();
             }}
             style={{ top: 80, left: 15 }}
           >

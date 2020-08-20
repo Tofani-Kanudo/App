@@ -213,7 +213,7 @@ class CompanyList extends Component {
     var token = localStorage.getItem("token");
     // console.log(token)
     axios
-      .get("http://scholarly-science.herokuapp.com/company-list", {
+      .get("https://morning-plateau-86103.herokuapp.com/company-list", {
         headers: { Authorization: `JWT ${token}` },
       })
       .then((res) => {
@@ -266,6 +266,7 @@ class CompanyList extends Component {
   };
 
   render() {
+    console.log(localStorage.getItem("token")!=null)
     const { companies } = this.state;
     console.log(this.state);
     const { countryFilter } = this.state;
@@ -286,63 +287,19 @@ class CompanyList extends Component {
     var displayedCards = 0;
     return (
       <div className="company-wrapper">
-        <svg
-          className="circle-svg"
-          width="527"
-          height="545"
-          viewBox="0 0 527 545"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g opacity="0.4">
-            <ellipse
-              cx="255.243"
-              cy="320.064"
-              rx="163.176"
-              ry="162.373"
-              transform="rotate(121.519 255.243 320.064)"
-              fill="#FFDD83"
-            />
-            <ellipse
-              cx="255.663"
-              cy="319.379"
-              rx="115.751"
-              ry="114.143"
-              transform="rotate(121.519 255.663 319.379)"
-              fill="white"
-            />
-            <ellipse
-              cx="295.175"
-              cy="125.791"
-              rx="66.7174"
-              ry="65.9136"
-              transform="rotate(121.519 295.175 125.791)"
-              fill="#4F51C0"
-            />
-            <ellipse
-              cx="95.7499"
-              cy="261.858"
-              rx="34.5645"
-              ry="32.9568"
-              transform="rotate(121.519 95.7499 261.858)"
-              fill="#FF91A5"
-            />
-          </g>
-        </svg>
-
         <div
           style={{
             justifyContent: "center",
             textAlign: "center",
-            marginTop: 20,
+            marginTop: 50,
           }}
         >
           <p className="company-page-title">
-            Engineering teams that fit your preferences
+            Engineering teams that fit <i>your</i> preferences.
           </p>
           <p className="company-page-subtitle">
             Search by culture, tech stack, values or perks. Sort by
-            science-based match score
+            science-based match score.
           </p>
         </div>
         <div className="row">

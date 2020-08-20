@@ -16,7 +16,7 @@ class Login extends Component {
     console.log(this.state);
     //post api call to backend
     axios
-      .post("http://scholarly-science.herokuapp.com/api/token/", {
+      .post("https://morning-plateau-86103.herokuapp.com/api/token/", {
         email: this.state.email,
         password: this.state.password,
       })
@@ -25,7 +25,7 @@ class Login extends Component {
         var token = res.data.access;
         localStorage.setItem("token", token);
         this.props.tokenAuth(localStorage.getItem("token"));
-        this.props.history.push("/companyList");
+        this.props.history.push("/");
       })
       .catch((err) => {
         console.log(err.message);

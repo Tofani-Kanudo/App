@@ -45,29 +45,31 @@ class Navbar extends Component {
         <div
           id="navbarSupportedContent"
           style={{
-            backgroundColor: "#212121",
+            background:"white",
             display: "flex",
-            zIndex: 1000,
-            position: "fixed",
+            // zIndex: 1000,
+            // position: "fixed",
             top: 0,
             left: 0,
             height: 58,
             width: "100%",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+            backgroundColor:"#F6F6FA",
+            // marginBottom: "25px"
+            // boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
           }}
         >
           <Hidden only={["xs"]}>
-            <ul style={{ marginRight: "auto" }}>
+            <ul style={{ marginRight: "auto",listStyleType: "none" }}>
               <li>
                 <Link
+                  id="Banner"
                   style={{
                     display: "flex",
                     flexDirection: "row",
-
                     padding: "18px 0px",
                     font: "16px Roboto",
                     textDecoration: "none",
-                    color: "white",
+                    
                     marginLeft: 0,
                   }}
                   to="/"
@@ -85,7 +87,15 @@ class Navbar extends Component {
             >
               <li class="nav-item">
                 <Link
-                  style={{ color: "#ffff", textDecoration: "none" }}
+                  style={{ fontSize:"18px", textDecoration: "none" }}
+                  to="/profile"
+                >
+                  Profile
+                </Link>
+              </li>
+              <li class="nav-item">
+                <Link
+                  style={{ fontSize:"18px", textDecoration: "none" }}
                   to="/companyList"
                 >
                   Companies
@@ -93,7 +103,7 @@ class Navbar extends Component {
               </li>
               <li class="nav-item">
                 <Link
-                  style={{ color: "#ffff", textDecoration: "none" }}
+                  style={{ fontSize:"18px", textDecoration: "none" }}
                   to="/project"
                 >
                   Projects
@@ -101,35 +111,42 @@ class Navbar extends Component {
               </li>
               <li class="nav-item">
                 <Link
-                  style={{ color: "#ffff", textDecoration: "none" }}
+                  style={{ fontSize:"18px", textDecoration: "none" }}
                   to="/interview"
                 >
                   Interview
                 </Link>
               </li>
               <li
+              
                 onClick={() => {
-                  // Axios.get("http://localhost:8000/api/logout")
-                  //   .then((res) => {
-                      // console.log(res);
-                      localStorage.clear("token");
+                  const token = localStorage.getItem("token");
+                  Axios.get("https://morning-plateau-86103.herokuapp.com/api/logout/", {
+                    headers: { Authorization: `JWT ${token}` },
+                  })
+                    .then((res) => {
+                      console.log(res);
+                      localStorage.removeItem("token");
                       this.props.tokenAuth(localStorage.getItem("token"));
+
                       this.props.history.push("/");
-                    // })
-                    // .catch((error) => {
-                    //   console.log(error);
-                    // });
+                    })
+                    .catch((error) => {
+                      console.log(error);
+                    });
                 }}
                 class="nav-item"
               >
-                Logout
+                <Link style={{ fontSize:"18px", textDecoration: "none" }}>
+                Logout</Link>
               </li>
             </ul>
           </Hidden>
           <Hidden only={["xl", "lg", "md", "sm"]}>
-            <ul style={{ marginRight: "auto" }}>
+            <ul style={{ marginRight: "auto",listStyleType: "none" }}>
               <li>
                 <Link
+                  id="Banner"
                   style={{
                     display: "flex",
                     flexDirection: "row",
@@ -137,7 +154,7 @@ class Navbar extends Component {
                     padding: "18px 0px",
                     font: "16px Roboto",
                     textDecoration: "none",
-                    color: "white",
+                    
                     marginLeft: 0,
                   }}
                   to="/"
@@ -163,29 +180,30 @@ class Navbar extends Component {
         <div
           id="navbarSupportedContent"
           style={{
-            backgroundColor: "#212121",
+            background:"white",
             display: "flex",
             zIndex: 1000,
-            position: "fixed",
+            // position: "fixed",
             top: 0,
             left: 0,
             height: 58,
             width: "100%",
-            boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+            backgroundColor:"#F6F6FA"
+            // boxShadow: "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
           }}
         >
           <Hidden only={["xs"]}>
-            <ul style={{ marginRight: "auto" }}>
+            <ul style={{ marginRight: "auto",listStyleType: "none" }}>
               <li>
                 <Link
+                  id="Banner"
                   style={{
                     display: "flex",
                     flexDirection: "row",
-
                     padding: "18px 0px",
                     font: "16px Roboto",
                     textDecoration: "none",
-                    color: "white",
+                    
                     marginLeft: 0,
                   }}
                   to="/"
@@ -203,7 +221,7 @@ class Navbar extends Component {
             >
               <li class="nav-item">
                 <Link
-                  style={{ color: "#ffff", textDecoration: "none" }}
+                  style={{ fontSize:"18px", textDecoration: "none" }}
                   to="/login"
                 >
                   Login
@@ -211,7 +229,7 @@ class Navbar extends Component {
               </li>
               <li class="nav-item">
                 <Link
-                  style={{ color: "#ffff", textDecoration: "none" }}
+                  style={{ fontSize:"18px", textDecoration: "none" }}
                   to="/signup"
                 >
                   Signup
@@ -220,7 +238,7 @@ class Navbar extends Component {
             </ul>
           </Hidden>
           <Hidden only={["xl", "lg", "md", "sm"]}>
-            <ul style={{ marginRight: "auto" }}>
+            <ul style={{ marginRight: "auto",listStyleType: "none" }}>
               <li>
                 <Link
                   style={{
@@ -230,7 +248,7 @@ class Navbar extends Component {
                     padding: "18px 0px",
                     font: "16px Roboto",
                     textDecoration: "none",
-                    color: "white",
+                    
                     marginLeft: 0,
                   }}
                   to="/"
@@ -265,9 +283,17 @@ class Navbar extends Component {
             margin: 0,
           }}
         >
+        <li class="nav-item">
+          <Link
+            style={{ fontSize:"18px", textDecoration: "none" }}
+            to="/profile"
+          >
+            Profile
+          </Link>
+        </li>
           <li class="nav-item">
             <Link
-              style={{ color: "#ffff", textDecoration: "none" }}
+              style={{ fontSize:"18px", textDecoration: "none" }}
               to="/companyList"
             >
               Companies
@@ -275,7 +301,7 @@ class Navbar extends Component {
           </li>
           <li class="nav-item">
             <Link
-              style={{ color: "#ffff", textDecoration: "none" }}
+              style={{ fontSize:"18px", textDecoration: "none" }}
               to="/project"
             >
               Projects
@@ -283,22 +309,25 @@ class Navbar extends Component {
           </li>
           <li class="nav-item">
             <Link
-              style={{ color: "#ffff", textDecoration: "none" }}
+              style={{ fontSize:"18px", textDecoration: "none" }}
               to="/interview"
             >
               Interview
             </Link>
           </li>
           <li
+          
             onClick={() => {
-              Axios.get("http://localhost:8000/api/logout")
+              const token = localStorage.getItem("token");
+              Axios.get("https://morning-plateau-86103.herokuapp.com/api/logout/", {
+                headers: { Authorization: `JWT ${token}` },
+              })
                 .then((res) => {
                   console.log(res);
                   localStorage.removeItem("token");
                   this.props.tokenAuth(localStorage.getItem("token"));
-                  this.props.history.push("/login");
-                  $("#mobile-menu-navbar").slideToggle("fast");
-                  this.setState({ menu: false });
+
+                  this.props.history.push("/");
                 })
                 .catch((error) => {
                   console.log(error);
@@ -306,7 +335,8 @@ class Navbar extends Component {
             }}
             class="nav-item"
           >
-            Logout
+            <Link style={{ fontSize:"18px", textDecoration: "none" }}>
+            Logout</Link>
           </li>
         </ul>
       );
@@ -323,7 +353,7 @@ class Navbar extends Component {
         >
           <li class="nav-item">
             <Link
-              style={{ color: "#ffff", textDecoration: "none" }}
+              style={{ fontSize:"18px", textDecoration: "none" }}
               to="/signup"
             >
               Signup
@@ -331,7 +361,7 @@ class Navbar extends Component {
           </li>
           <li class="nav-item">
             <Link
-              style={{ color: "#ffff", textDecoration: "none" }}
+              style={{ fontSize:"18px", textDecoration: "none" }}
               to="/login"
             >
               Login
@@ -347,8 +377,8 @@ class Navbar extends Component {
 
     return (
       <div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-          <div class="navbar-brand">COVID Opportunities</div>
+        <nav class="navbar navbar-expand-lg container" style={{padding:"18px 24px", marginRight:"12px"}}>
+          {/* <div class="navbar-brand">COVID Opportunities</div>
           <button
             class="navbar-toggler"
             type="button"
@@ -359,7 +389,7 @@ class Navbar extends Component {
             aria-label="Toggle navigation"
           >
             <span class="navbar-toggler-icon"></span>
-          </button>
+          </button> */}
           {this.renderNav(tokenReducer)}
         </nav>
         <div
@@ -368,7 +398,7 @@ class Navbar extends Component {
 
             display: "flex",
             flexDirection: "column",
-            backgroundColor: "#212121",
+            background:"white",
             zIndex: 1000,
             display: "none",
           }}

@@ -3,9 +3,9 @@
     height: 750px;
     position: absolute;
     z-index: -1;
-    top: 38px;
+    /* top: 38px; */
     right: -135px;
-    padding: 20px;
+    /* padding: 20px; */
     opacity: 0.8;
   }
 
@@ -14,9 +14,9 @@
     height: 750px;
     position: absolute;
     z-index: -1;
-    top: 38px;
+    /* top: 38px; */
     right: -60px;
-    padding: 20px;
+    /* padding: 20px; */
     opacity: 0.8;
   }
 

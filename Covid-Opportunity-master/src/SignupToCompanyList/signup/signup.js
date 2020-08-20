@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./signup.css";
-import IntlTelInput from "react-intl-tel-input";
+import PhoneInput from "react-phone-input-2";
 import "./intTel.css";
 
 class Signup extends Component {
@@ -95,18 +95,58 @@ class Signup extends Component {
     if (
       this.state.passValidation === "Validated"
     ) {
-      console.log(this.state);
+      console.log(this.state.phone);
       // add registration api url
       axios
-        .post("http://scholarly-science.herokuapp.com/api/registration/", {
+        .post("https://morning-plateau-86103.herokuapp.com/api/registration/", {
           full_name: this.state.name,
           email: this.state.email,
           phone_number: this.state.phone,
           password1: this.state.password,
         })
         .then((res) => {
-          // redirect to thank you page
-          this.props.history.push("/thankyou");
+          // redirect to Updating page
+          axios.post("https://morning-plateau-86103.herokuapp.com/api/login/", {
+        email: this.state.email,
+        password: this.state.password,
+      })
+      .then((res) => {
+        // console.log(res.data.access);
+        var token = res.data.access;
+        localStorage.setItem("token", token);
+        this.props.tokenAuth(localStorage.getItem("token"));
+        // this.props.history.push("/");
+      })
+      .catch((err) => {
+        axios.post("https://morning-plateau-86103.herokuapp.com/api/token/", {
+        email: this.state.email,
+        password: this.state.password,
+      })
+      .then((res) => {
+        // console.log(res.data.access);
+        var token = res.data.access;
+        localStorage.setItem("token", token);
+        this.props.tokenAuth(localStorage.getItem("token"));
+        // this.props.history.push("/");
+      })
+      .catch((err) => {
+        console.log(err.message);
+        if (err.message === "Request failed with status code 400"||"Request failed with status code 401")
+          this.setState({
+            ...this.state,
+            error: "Invalid Email or password",
+          });
+        console.log(this.state.error);
+      });
+        console.log(err.message);
+        if (err.message === "Request failed with status code 400"||"Request failed with status code 401")
+          this.setState({
+            ...this.state,
+            error: "Invalid Email or password",
+          });
+        console.log(this.state.error);
+      });
+          this.props.history.push("/update");
         })
         .catch((error) => {
           // console.log(error)
@@ -123,7 +163,7 @@ class Signup extends Component {
     this.setState({
       [e.target.id]: e.target.value,
     });
-    console.log(this.state);
+    // console.log(this.state);
   };
   handleClick = (e) => {
     this.setState({
@@ -344,16 +384,21 @@ class Signup extends Component {
                   />
                 </div>
                 <div className="signup-form-row">
-                  <IntlTelInput
-                    style={{ marginLeft: "-33.4%" }}
-                    className="signup-form-control signup-input tele"
-                    type="tel"
-                    name="phone"
-                    id="phone"
-                    required
-                    preferredCountries={["in"]}
-                    onPhoneNumberChange={this.handlePhoneChange}
-                  />
+                  <div id="mar">
+                <PhoneInput
+                className="signup-form-control signup-input"
+                  defaultCountry={"in"}
+                  placeholder="Enter Your Mobile Number"
+                  inputStyle={{
+                    height: "40px",
+                    width: "66.67%",
+                    border: "1px solid #ddd",
+                  }}
+                  containerStyle={{ width: "100%" }}
+                  country={"in"}
+                  value={this.state.phone}
+                  onChange={phone => this.setState({ phone })}
+                /></div>
                 </div>
                 <div className="signup-form-row">
                   <input
@@ -774,6 +819,7 @@ class Signup extends Component {
         {/* <Script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></Script>
             {/* <div onLoad={this.loadintTel}></div> */}
         {/* <div onLoad={this.phoneSelector()}></div> */}
+        <br/><br/>
       </div>
     );
   }

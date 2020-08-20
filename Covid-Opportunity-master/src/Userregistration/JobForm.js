@@ -207,7 +207,7 @@ class JobForm extends Component {
 
     axios
       .post(
-        `https://scholarly-science.herokuapp.com/accounts/dummy/profile/`,
+        `https://morning-plateau-86103.herokuapp.com/accounts/dummy/profile/`,
 
         {
           city,

@@ -1,14 +1,14 @@
 .nav-item {
   display: block;
-  padding: 18px 24px;
-  color: #ffff;
+  padding: 18px 5px;
+  /* color: #ffff; */
   text-decoration: none;
   cursor: pointer;
   height: 58px;
 }
 
-.nav-item:hover {
-  background-color: #262a2e;
+#navbarupportedContent{
+  background-color: none;
 }
 
 .navbar-nav {
@@ -16,7 +16,25 @@
 }
 
 .navbar {
-  height: 50px;
+  height: 100px;
 
   z-index: 1;
+}
+
+li a{
+  border-radius: 10px;
+  padding: 4px 12px;
+  margin: 4px;
+  color: #212121;
+}
+
+li a:hover{
+  color: #fff;
+  text-decoration: none;
+  background: #314b7f;
+}
+
+#Banner:hover{
+  color: #212121;
+  background: none;
 }

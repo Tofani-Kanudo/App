@@ -9,9 +9,9 @@ const ForgotPassword =()=>{
     }
     const submitForm=(e)=>{
         //add url
-        axios.post("http://",
+        axios.post("https://morning-plateau-86103.herokuapp.com/api/password/reset/",
             {
-                email
+                email: enterEmail,
             }
         ).then((res)=>{
             console.log(res);

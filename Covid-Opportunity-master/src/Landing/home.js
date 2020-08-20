@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 import "./home.css";
@@ -752,7 +753,8 @@ class Home extends React.Component{
                         <br />
                         with Companies
                         <br />
-                    </span>
+                    </span><Link to="/signup">
+                    <button className="button">Get Started</button></Link>
             </div>
             <div class="texta1">
                     <span>
