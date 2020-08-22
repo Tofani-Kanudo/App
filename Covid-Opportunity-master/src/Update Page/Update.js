@@ -48,7 +48,7 @@ class Update extends Component {
         console.log(this.state.number)
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response);
       });
     var inputOpening = document.getElementById("add_skill");
     inputOpening.addEventListener("keyup", (event) => {
@@ -126,21 +126,21 @@ class Update extends Component {
       end_date,
     }=this.state;
     let token = localStorage.getItem("token");
-    axios.post(`https://api.covid-careers.com/accounts/dummy/profile/`,
+    axios.post(`https://scholarlyscience-env.eba-8k5ffsmk.ap-south-1.elasticbeanstalk.com/accounts/dummy/profile/`,
     {
-      city,
+      city: city,
       location: location,
-      college,
-      degree,
+      college: college,
+      degree: degree,
       trade: major,
       start_date: start_date,
       end_date: end_date,
       skills: skillArray,
-      linkedin,
-      github,
-      wechat,
+      linkedin: linkedin,
+      github: github,
+      wechat: wechat,
       lineid: line,
-      portfolio,
+      portfolio: portfolio,
       first_time_login: true,
     },
     {
@@ -152,7 +152,7 @@ class Update extends Component {
     this.props.history.push("/companyList")
   })
   .catch((err) => {
-    console.log(err);
+    console.log(err.response);
     alert("Some Error Occurred");
   });
   }

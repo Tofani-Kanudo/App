@@ -220,7 +220,7 @@ class CompanyList extends Component {
         this.setState({ companies: res.data });
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err.response);
       });
     window.scrollTo(0, 0);
   };
