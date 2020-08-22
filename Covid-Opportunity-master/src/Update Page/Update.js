@@ -126,7 +126,7 @@ class Update extends Component {
       end_date,
     }=this.state;
     let token = localStorage.getItem("token");
-    axios.post(`https://scholarlyscience-env.eba-8k5ffsmk.ap-south-1.elasticbeanstalk.com/accounts/dummy/profile/`,
+    axios.post(`https://api.covid-careers.com/accounts/dummy/profile/`,
     {
       city: city,
       location: location,
