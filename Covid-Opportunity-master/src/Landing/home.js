@@ -18,6 +18,7 @@ import facebook from './img/facebook-1.svg';
 import discord from './img/discord.svg';
 import wechat from './img/wechat.svg';
 import line from './img/line.svg';
+import { Link } from 'react-router-dom';
 
 class Home extends React.Component {
 	render() {
@@ -28,7 +29,8 @@ class Home extends React.Component {
 						<h2>Looking for a Job or an Internship?</h2>
 						<span>Submit your profile and get connected with companies.</span>
 						<br />
-						<button class="heading__button">View Companies</button>
+						<Link to="/companyList">
+						<button class="heading__button">View Companies</button></Link>
 					</div>
 					<div class="texta__illust">
 						<img src={ima} id="ima" alt="illustratin" />
@@ -866,7 +868,8 @@ class Home extends React.Component {
 					</div>
 					<div class="texta4__text">
 						<h1 class="texta4__heading">Let the Companies Hunt You!!</h1>
-						<button class="texta4__button">Get started</button>
+						<Link to="/companyList">
+						<button class="texta4__button">Get started</button></Link>
 					</div>
 					<div class="texta4__bg">
 						<img src={footer} alt="footer" class="texta4__img" />

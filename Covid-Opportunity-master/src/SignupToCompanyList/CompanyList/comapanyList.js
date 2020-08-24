@@ -210,6 +210,26 @@ class CompanyList extends Component {
     // React.initializeTouchEvents(true);
     // get company list from backend
     // var token= JSON.parse(localStorage.getItem('token'))
+    axios
+      .post("https://api.covid-careers.com/api/token/", {
+        email: "yashesh.mankad06@gmail.com",
+        password: "1234",
+      })
+      .then((res) => {
+        console.log(res.data.access);
+        var token = res.data.access;
+        sessionStorage.setItem("token", token);
+        this.props.tokenAuth(sessionStorage.getItem("token"));
+      })
+      .catch((err) => {
+        console.log(err.message);
+        if (err.message === "Request failed with status code 400"||"Request failed with status code 401")
+          this.setState({
+            ...this.state,
+            error: "Invalid Email or password",
+          });
+        console.log(this.state.error);
+      });
     var token = sessionStorage.getItem("token");
     // console.log(token)
     axios
