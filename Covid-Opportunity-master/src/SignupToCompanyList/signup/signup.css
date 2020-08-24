@@ -14,7 +14,11 @@
   padding-left: 2%;
   padding-top: 30px;
 }
-
+.demo-illus {
+  height: 600px;
+  margin-left: -850px;
+  margin-top: -12px;
+}
 .signup-illus3 {
   /* position: fixed; */
   margin-top: -80px;
@@ -138,7 +142,9 @@ label {
   margin-left: -670px;
   position: fixed;
 }
-
+.mobile-illus {
+  display: none;
+}
 @media screen and (max-width: 992px) {
   #welcome {
     font-size: 24px !important;
@@ -154,11 +160,24 @@ label {
   .subtitle {
     font-size: 16px;
   }
+  .mobile-illus {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 568px) {
+  .mobile-illus {
+    display: flex;
+    height: auto;
+    width: 60%;
+    margin-left: 5rem;
+    /* margin: auto !important; */
+  }
   .signup-mid {
-    margin-top: -160px;
+    margin-top: -3rem;
+    /* padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    width: 90%; */
   }
   .signup-form-control {
     display: block;
@@ -187,4 +206,6 @@ label {
   }
 }
 
-#mar{margin-top: 10px !important;}
+#mar {
+  margin-top: 10px !important;
+}

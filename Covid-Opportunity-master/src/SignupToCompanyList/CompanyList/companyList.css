@@ -12,6 +12,8 @@
   overflow-anchor: none;
   overflow-y: hidden;
   min-height: 100vh;
+  padding: 20px 200px;
+  padding-top: 0;
 }
 .company-page-title {
   font-family: Roboto;
@@ -41,6 +43,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
+  max-width: 100%;
 }
 
 .card-title {
@@ -84,20 +87,23 @@ option {
   color: #0f0f21;
 }
 .card-container {
+  font-family: Roboto;
   cursor: pointer;
   border-radius: 50px;
   width: 487px;
-  height: 241px;
+  min-width: 310px;
+  height: 243px;
   border-radius: 16px;
   background-color: #ffffff;
   border: #e6e6ff;
   padding: 24px;
-  margin: 10px;
+  margin-top: 15px;
   margin-right: -15px;
-  box-shadow: 0 14px 20px rgba(15, 15, 33, 0.1);
+  box-shadow: 0 0 20px 1px rgba(117, 117, 117, 0.3);
+  transition: all 0.2s ease-in-out;
 }
 .card-container:hover {
-  margin-top: -1px;
+  margin-top: -0.1px;
 }
 .company-logo {
   justify-self: start;
@@ -131,14 +137,14 @@ option {
 }
 
 .tags_wrapper {
-  justify-content: left;
-  text-align: left;
-  padding-left: 50px;
-  position: fixed;
-  left: 10px;
-  max-width: 25%;
-  margin-top: 20px;
-  top: 325px;
+  margin-left: 2.5rem;
+}
+.tags_filters {
+  /* padding: 1rem; */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
 }
 .each_tag_container {
   display: flex;
@@ -187,10 +193,11 @@ option {
   text-transform: uppercase;
   font-weight: 500;
   background-color: #fff;
-  width: 500px;
-  margin-left: 250px;
+  width: 92%;
+  /* margin-left: 250px;
   margin-bottom: 20px;
-  margin-top: 10px;
+  margin-top: 10px; */
+  margin: 25px 50px 25px 25px;
   box-sizing: border-box;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
     box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
@@ -202,7 +209,7 @@ option {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
-  box-shadow: 0 14px 20px rgba(15, 15, 33, 0.1);
+  box-shadow: 0 0 20px 1px rgba(117, 117, 117, 0.3);
 }
 
 .tech-stacks {
@@ -324,7 +331,7 @@ option {
   display: flex;
   flex-direction: row;
   z-index: 2;
-  position: fixed;
+  /* position: fixed; */
   left: 10px;
   margin-bottom: 50px;
   margin-left: 50px;
@@ -353,20 +360,34 @@ select {
   text-decoration: none;
   outline: none !important;
 }
-
+@media screen and (max-width: 1870px) {
+  .company-wrapper {
+    padding: 0;
+  }
+  .card-container {
+    width: 453px;
+    height: 243px;
+  }
+}
 
 @media screen and (max-width: 992px) {
+  .company-wrapper {
+    padding: 1rem;
+  }
   .card-container {
     cursor: pointer;
     border-radius: 50px;
-    width: 330px;
-    height: 219px;
+    width: 340px;
+    height: 243px;
+    /* height: 219px; */
     border-radius: 16px;
-    background-color: #ffffff;
     border: #e6e6ff;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 14px 20px rgba(15, 15, 33, 0.1);
+    /* padding: 20px;*/
+    margin: 5px;
+    box-shadow: 0 0 20px 1px rgba(117, 117, 117, 0.3);
+  }
+  .companies {
+    padding: 0 !important;
   }
   .company-image {
     width: 54px;
@@ -382,8 +403,12 @@ select {
     padding-left: 0px;
     margin-left: 0px;
   }
-
-  .show-more:active{
+  .tags_filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .show-more:active {
     text-decoration: none;
   }
 
@@ -393,6 +418,7 @@ select {
   .flex-container {
     justify-content: center;
     overflow: hidden;
+    width: 100%;
   }
   .tech-stacks {
     height: 70px;

@@ -203,7 +203,7 @@ class JobForm extends Component {
       shareProfile,
       letCompany
     );
-    let token = localStorage.getItem("token");
+    let token = sessionStorage.getItem("token");
 
     axios
       .post(

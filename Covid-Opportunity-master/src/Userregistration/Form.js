@@ -178,7 +178,7 @@ class Form extends Component {
       "Wyoming",],
   };
   componentDidMount() {
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     axios
       .get("https://api.covid-careers.com/accounts/dummy/id", {
         headers: { Authorization: `JWT ${token}` },

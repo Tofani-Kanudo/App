@@ -120,14 +120,14 @@ class Navbar extends Component {
               <li
               
                 onClick={() => {
-                  const token = localStorage.getItem("token");
+                  const token = sessionStorage.getItem("token");
                   Axios.get("https://api.covid-careers.com/api/logout/", {
                     headers: { Authorization: `JWT ${token}` },
                   })
                     .then((res) => {
                       console.log(res);
-                      localStorage.removeItem("token");
-                      this.props.tokenAuth(localStorage.getItem("token"));
+                      sessionStorage.removeItem("token");
+                      this.props.tokenAuth(sessionStorage.getItem("token"));
 
                       this.props.history.push("/");
                     })

@@ -30,7 +30,7 @@ class Update extends Component {
     skillArray: [],
   };
   componentDidMount() {
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     axios.get("https://api.covid-careers.com/accounts/dummy/id/", {
         headers: { Authorization: `JWT ${token}` },
       })
@@ -125,7 +125,7 @@ class Update extends Component {
       start_date,
       end_date,
     }=this.state;
-    let token = localStorage.getItem("token");
+    let token = sessionStorage.getItem("token");
     axios.post(`https://api.covid-careers.com/accounts/dummy/profile/`,
     {
       city: city,

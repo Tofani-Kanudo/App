@@ -5,18 +5,19 @@ const Modal = () => {
   return (
     <div className="modals" id="modal">
       <div
-        onClick={() => {
-          $("#modal").slideToggle("slow");
-        $("#navbarSupportedContent").slideToggle("slow");
-        }}
         style={{
           position: "absolute",
-          top: 50,
+          top: 100,
           right: 30,
           fontSize: 20,
           fontWeight: 700,
           color: "black",
           cursor: "pointer",
+        }}
+        onClick={() => {
+          $("#modal").slideToggle("slow");
+        $("#navbarSupportedContent").slideToggle("slow");
+        window.scrollTo(0, 0);
         }}
       >
         X

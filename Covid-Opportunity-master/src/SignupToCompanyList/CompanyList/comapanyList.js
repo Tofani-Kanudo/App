@@ -210,10 +210,10 @@ class CompanyList extends Component {
     // React.initializeTouchEvents(true);
     // get company list from backend
     // var token= JSON.parse(localStorage.getItem('token'))
-    var token = localStorage.getItem("token");
+    var token = sessionStorage.getItem("token");
     // console.log(token)
     axios
-      .get("https://api.covid-careers.com/company-list", {
+      .get("https://api.covid-careers.com/company-list/", {
         headers: { Authorization: `JWT ${token}` },
       })
       .then((res) => {
@@ -266,7 +266,7 @@ class CompanyList extends Component {
   };
 
   render() {
-    console.log(localStorage.getItem("token")!=null)
+    console.log(sessionStorage.getItem("token")!=null)
     const { companies } = this.state;
     console.log(this.state);
     const { countryFilter } = this.state;
@@ -308,7 +308,7 @@ class CompanyList extends Component {
               <div className="country-filters">
                 <FormControl
                   className="search-form"
-                  style={{ width: "200px", backgroundColor: "#c8d3e9" }}
+                  style={{ width: "300px", backgroundColor: "#c8d3e9" }}
                   variant="outlined"
                 >
                   <InputLabel

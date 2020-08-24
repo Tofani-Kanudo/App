@@ -23,8 +23,8 @@ class Login extends Component {
       .then((res) => {
         console.log(res.data.access);
         var token = res.data.access;
-        localStorage.setItem("token", token);
-        this.props.tokenAuth(localStorage.getItem("token"));
+        sessionStorage.setItem("token", token);
+        this.props.tokenAuth(sessionStorage.getItem("token"));
         this.props.history.push("/");
       })
       .catch((err) => {

@@ -23,7 +23,7 @@ import Interview from "./Interview/Interview";
 
 class App extends Component {
   componentDidMount() {
-    const token = localStorage.getItem("token");
+    const token = sessionStorage.getItem("token");
     this.props.tokenAuth(token);
   }
   render() {
@@ -32,7 +32,7 @@ class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/">
-              {localStorage.getItem("token")!=null ? (
+              {sessionStorage.getItem("token")!=null ? (
                 <Redirect to="/companyList" />
               ) : (
                 <Home />
@@ -41,53 +41,67 @@ class App extends Component {
             <Route path="/signup" component={Signup}></Route>
             <Route path="/login" component={Login}></Route>
             <Route path="/assignmentKey" >
-              <Navbar /><ForgotPassword/>
+              {/* <Navbar /> */}
+              <ForgotPassword/>
               </Route>
             <Route path="/thankyou" >
-              <Navbar /><ThankYouLayout/>
+              {/* <Navbar /> */}
+              <ThankYouLayout/>
               </Route>
             <Route path="/interview" >
-              <Navbar /><Interview/>
+              {/* <Navbar /> */}
+              <Interview/>
               </Route>
 
             <Route path="/admin" >
-              <Navbar /><Registration/>
+              {/* <Navbar /> */}
+              <Registration/>
               </Route>
             <Route path="/dreamjob" >
-              <Navbar /><DreamJob/>
+              {/* <Navbar /> */}
+              <DreamJob/>
               </Route>
             <Route path="/opening" >
-              <Navbar /><Opening/>
+              {/* <Navbar /> */}
+              <Opening/>
               </Route>
             <Route path="/user1" >
-              <Navbar /><User/>
+              {/* <Navbar /> */}
+              <User/>
               </Route>
             <Route path="/demo" >
-              <Navbar /><Demo/>
+              {/* <Navbar /> */}
+              <Demo/>
               </Route>
             <Route path="/user2" >
-              <Navbar /><Usernext/>
+              {/* <Navbar /> */}
+              <Usernext/>
               </Route>
             <Route path="/update" >
               <Update/>
               </Route>
             <Route path="/profile">
-                <Navbar/><Update/>
+                {/* <Navbar /> */}
+                <Update/>
             </Route>
             <Route path="/companyList" >
-              <Navbar /><CompanyList/>
+              {/* <Navbar /> */}
+              <CompanyList/>
               </Route>
             <Route path="/description" >
-              <Navbar /><CompanyDescription/>
+              {/* <Navbar /> */}
+              <CompanyDescription/>
               </Route>
 
             <Route exact path="/project" >
-              <Navbar /><CompanyProject/>
+              {/* <Navbar /> */}
+              <CompanyProject/>
               </Route>
             <Route
               exact
               path="/project/:id">
-                <Navbar /><ProjectDescription/>
+                {/* <Navbar /> */}
+                <ProjectDescription/>
               </Route>
           </Switch>
         </div>

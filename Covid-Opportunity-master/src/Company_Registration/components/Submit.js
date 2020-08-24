@@ -19,7 +19,7 @@ const Submit = (props) => {
     //Request to submit form
     var locationCustom = locationReducer.concat(customlocationReducer);
     console.log(props);
-    var token = localStorage.getItem("token");
+    var token = sessionStorage.getItem("token");
     axios
       .post(
         "https://api.covid-careers.com/company/",

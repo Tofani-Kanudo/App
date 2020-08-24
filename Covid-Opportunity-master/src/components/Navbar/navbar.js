@@ -52,8 +52,8 @@ class Navbar extends Component {
                 Axios.get("https://api.covid-careers.com/api/logout")
                   .then((res) => {
                     console.log(res);
-                    localStorage.removeItem("token");
-                    this.props.tokenAuth(localStorage.getItem("token"));
+                    sessionStorage.removeItem("token");
+                    this.props.tokenAuth(sessionStorage.getItem("token"));
                     return <Redirect to="/login" />;
                   })
                   .catch((error) => {
