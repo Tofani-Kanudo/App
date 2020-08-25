@@ -43,7 +43,6 @@ const Logo = () => {
 	const fadeOut = () => {
 		let interval = setInterval(function() {
 			let img = document.getElementById(`${count}`);
-
 			let opacity = Number(window.getComputedStyle(img).getPropertyValue('opacity'));
 
 			document.getElementById(`${count}`).style.opacity = opacity - 1;

@@ -1,3 +1,4 @@
+import {Link} from "react-router-dom";
 import axios from "axios";
 import React from 'react';
 // import 'bootstrap/dist/css/bootstrap.css';
@@ -31,7 +32,6 @@ class Home extends React.Component {
 			console.log(res.data.access);
 			var token = res.data.access;
 			sessionStorage.setItem("token", token);
-			this.props.history.push("/");
 		  })
 		  .catch((err) => {
 			console.log(err.message);
@@ -45,7 +45,9 @@ class Home extends React.Component {
 						<h2>Looking for a Job or an Internship?</h2>
 						<span>Submit your profile and get connected with companies.</span>
 						<br />
-						<button class="heading__button" onClick={this.handleSubmit}>View Companies</button>
+						<Link to={"/companyList"}>
+							<button class="heading__button" onClick={this.handleSubmit}>View Companies</button>
+						</Link>
 					</div>
 					<div class="texta__illust">
 						<img src={ima} id="ima" alt="illustratin" />
@@ -883,7 +885,9 @@ class Home extends React.Component {
 					</div>
 					<div class="texta4__text">
 						<h1 class="texta4__heading">Let the Companies Hunt You!!</h1>
+					<Link to="/companyList">
 						<button class="texta4__button"  onClick={this.handleSubmit}>Get started</button>
+					</Link>
 					</div>
 					<div class="texta4__bg">
 						<img src={footer} alt="footer" class="texta4__img" />

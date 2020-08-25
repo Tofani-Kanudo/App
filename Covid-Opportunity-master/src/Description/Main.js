@@ -30,7 +30,7 @@ class Main extends Component {
                 }}
                 className="description-button"
               >
-                Get Employee Refferal
+                Get Employee Referral
               </div>
             </div>
           </Grid>
