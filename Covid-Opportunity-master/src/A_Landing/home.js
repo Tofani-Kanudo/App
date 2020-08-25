@@ -31,7 +31,6 @@ class Home extends React.Component {
 			console.log(res.data.access);
 			var token = res.data.access;
 			sessionStorage.setItem("token", token);
-			this.props.tokenAuth(sessionStorage.getItem("token"));
 			this.props.history.push("/");
 		  })
 		  .catch((err) => {
