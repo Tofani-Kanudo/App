@@ -23,14 +23,14 @@ const Modal = () => {
         X
       </div>
       <div className="modal-heading">
-        This is a premium-only feature: join to unlock this feature
+        In order to request Employee Referral, <br/> View openings And connect with various Companies,<br/>
       </div>
       <div className="modal-subheading">
-        Want unlimited access to thousands of commercial-ready premium products?
+        Complete Profile Verification and Log into your Account!
       </div>
-      <div className=" description-button description-modal-button">
-        Go Premium
-      </div>
+      {/* <div className=" description-button description-modal-button">
+        Go To Signup
+      </div> */}
     </div>
   );
 };

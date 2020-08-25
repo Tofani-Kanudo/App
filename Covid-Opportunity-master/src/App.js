@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Home from "./A_Landing/home";
 import Signup from "./SignupToCompanyList/signup/signup";
 import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
 import Login from "./SignupToCompanyList/login/login";
@@ -15,7 +16,6 @@ import CompanyProject from "./CompanyProjects/companyProjects";
 import ProjectDescription from "./ProjectDescription/projectDescription";
 import CompanyDescription from "./Description/CompanyDescription";
 import ForgotPassword from "./ForgotPassword/forgotPassword";
-import Home from "./Landing/home";
 import Update from "./Update Page/Update";
 import User from "./Userregistration/User";
 import Usernext from "./Userregistration/Usernext";

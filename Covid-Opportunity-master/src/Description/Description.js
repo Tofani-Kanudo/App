@@ -28,7 +28,7 @@ class Description extends Component {
   renderChip = (tags) => {
     let z = [];
     z = tags.map((value) => {
-      return <Chip label={value} />;
+      return <><Chip label={value} /></>;
     });
     return z;
   };

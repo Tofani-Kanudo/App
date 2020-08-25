@@ -419,13 +419,13 @@ body {
   margin-top: 200px;
   color: black;
   font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 28px;
+  font-size: 44px;
   text-align: center;
   font-weight: 500;
 }
 .modal-subheading {
   color: rgba(0, 0, 0, 0.6);
-  font-size: 18px;
+  font-size: 30px;
   line-height: 1.4;
   margin-bottom: 15px;
   text-align: center;

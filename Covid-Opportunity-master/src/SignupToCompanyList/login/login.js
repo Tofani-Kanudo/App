@@ -15,8 +15,7 @@ class Login extends Component {
     e.preventDefault();
     console.log(this.state);
     //post api call to backend
-    axios
-      .post("https://api.covid-careers.com/api/token/", {
+    axios.post("https://api.covid-careers.com/api/token/", {
         email: this.state.email,
         password: this.state.password,
       })
@@ -28,19 +27,13 @@ class Login extends Component {
         this.props.history.push("/");
       })
       .catch((err) => {
-        console.log(err.message);
-        if (err.message === "Request failed with status code 400"||"Request failed with status code 401")
-          this.setState({
-            ...this.state,
-            error: "Invalid Email or password",
-          });
-        console.log(this.state.error);
+        console.log(err.response);
+        // if (err.message === "Request failed with status code 400"||"Request failed with status code 401")
+        //   this.setState({
+        //     ...this.state,
+        //     error: "Invalid Email or password",
+        //   });
       });
-  };
-  handleChange = (e) => {
-    this.setState({
-      [e.target.id]: e.target.value,
-    });
   };
   render() {
     return (

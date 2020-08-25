@@ -1,148 +1,139 @@
-import React from "react";
-import * as image from "../img";
-import { Hidden } from "@material-ui/core";
+import React from 'react';
+import * as image from '../img';
+import { Hidden } from '@material-ui/core';
 
 const Logo = () => {
-  const {
-    first,
-    second,
-    third,
-    fourth,
-    fifth,
-    sixth,
-    seventh,
-    eighth,
-    ninth,
-    tenth,
-    eleven,
-    twelve,
-    thirteen,
-    fourteen,
-    fifteen,
-    sixteen,
-    seventeen,
-    eighteen,
-    nineteen,
-    twenty,
-    twentyone,
-  } = image;
+	const {
+		first,
+		second,
+		third,
+		fourth,
+		fifth,
+		sixth,
+		seventh,
+		eighth,
+		ninth,
+		tenth,
+		eleven,
+		twelve,
+		thirteen,
+		fourteen,
+		fifteen,
+		sixteen,
+		seventeen,
+		eighteen,
+		nineteen,
+		twenty,
+		twentyone
+	} = image;
 
-  var x = [
-    first,
-    second,
-    third,
-    fourth,
-    fifth,
-    sixth,
-    seventh,
-    eighth,
-    ninth,
-    tenth,
-    eleven,
-    twelve,
-    thirteen,
-    fourteen,
-    fifteen,
-    sixteen,
-    seventeen,
-    eighteen,
-    nineteen,
-    twenty,
-    twentyone,
-  ];
-  var y = [first, second, third, fourth, fifth, sixth, seventh, eighth, ninth];
-  var count = 0;
-  var change_s = y.length;
-  var change = 0;
-  var s = y.length;
-  const fadeOut = () => {
-    let interval = setInterval(function () {
-      let img = document.getElementById(`${count}`);
+	var x = [
+		first,
+		second,
+		third,
+		fourth,
+		fifth,
+		sixth,
+		seventh,
+		eighth,
+		ninth,
+		tenth,
+		eleven,
+		twelve,
+		thirteen,
+		fourteen,
+		fifteen,
+		sixteen,
+		seventeen,
+		eighteen,
+		nineteen,
+		twenty,
+		twentyone
+	];
+	var y = [ first, second, third, fourth, fifth, sixth, seventh, eighth, ninth ];
+	var count = 0;
+	var change_s = y.length;
+	var change = 0;
+	var s = y.length;
+	const fadeOut = () => {
+		let interval = setInterval(function() {
+			let img = document.getElementById(`${count}`);
 
-      let opacity = Number(
-        window.getComputedStyle(img).getPropertyValue("opacity")
-      );
+			let opacity = Number(window.getComputedStyle(img).getPropertyValue('opacity'));
 
-      document.getElementById(`${count}`).style.opacity = opacity - 1;
+			document.getElementById(`${count}`).style.opacity = opacity - 1;
 
-      if (opacity <= 0) {
-        clearInterval(interval);
-        document.getElementById(`${count}`).src = `${x[s]}`;
-        fadeIn();
-      }
-    }, 0);
-  };
-  const fadeIn = () => {
-    var interval = setInterval(function () {
-      var img = document.getElementById(`${count}`);
+			if (opacity <= 0) {
+				clearInterval(interval);
+				document.getElementById(`${count}`).src = `${x[s]}`;
+				fadeIn();
+			}
+		}, 0);
+	};
+	const fadeIn = () => {
+		var interval = setInterval(function() {
+			var img = document.getElementById(`${count}`);
 
-      var opacity = Number(
-        window.getComputedStyle(img).getPropertyValue("opacity")
-      );
+			var opacity = Number(window.getComputedStyle(img).getPropertyValue('opacity'));
 
-      document.getElementById(`${count}`).style.opacity = opacity + 1;
+			document.getElementById(`${count}`).style.opacity = opacity + 1;
 
-      if (opacity >= 1) {
-        clearInterval(interval);
+			if (opacity >= 0) {
+				clearInterval(interval);
 
-        if (change >= y.length && change_s <= x.length) {
-          change = 0;
-          change_s += 0.5;
-          count = Math.floor(change);
-          s = Math.floor(change_s);
+				if (change >= y.length && change_s <= x.length) {
+					change = 0;
+					change_s += 0.1;
+					count = Math.floor(change); //0
+					s = Math.floor(change_s); //7
 
-          fadeOut();
-        } else if (change_s >= x.length && change <= y.length) {
-          change_s = 0;
-          change += 0.5;
-          count = Math.floor(change);
-          s = Math.floor(change_s);
+					fadeOut();
+				} else if (change_s >= x.length && change <= y.length) {
+					change_s = 0;
+					change += 0.1;
+					count = Math.floor(change);
+					s = Math.floor(change_s);
 
-          fadeOut();
-        } else if (change_s >= x.length && change > y.length) {
-          change_s = 0;
-          change = 0;
-          s = Math.floor(change_s);
-          count = Math.floor(change);
+					fadeOut();
+				} else if (change_s >= x.length && change > y.length) {
+					change_s = 0;
+					change = 0;
+					s = Math.floor(change_s);
+					count = Math.floor(change);
+					console.log('thr ' + count, s);
+					fadeOut();
+				} else {
+					count = Math.floor(change);
+					s = Math.floor(change_s);
+					change += 0.1;
+					change_s += 0.1;
+					console.log('four ' + count, s);
+					fadeOut();
+				}
+			}
+		}, 0);
+	};
+	const renderImage = () => {
+		fadeOut();
+		return y.map((img, index) => {
+			return (
+				<div className="image_wrap" key={index}>
+					<img className="logo_image" src={img} id={index} />
+				</div>
+			);
+		});
+	};
 
-          fadeOut();
-        } else {
-          count = Math.floor(change);
-          s = Math.floor(change_s);
-          change += 0.5;
-          change_s += 0.5;
-
-          fadeOut();
-        }
-      }
-    }, 0);
-  };
-  const renderImage = () => {
-    var z = [];
-
-    z = y.map((img, index) => {
-      let z = (
-        <div className="image_wrap">
-          <img className="logo_image" src={img} id={index} />
-        </div>
-      );
-
-      return z;
-    });
-    fadeOut();
-    return z;
-  };
-
-  return (
-    <div>
-      <Hidden only={["lg", "md", "sm", "xl"]}>
-        <div className="logo_containers">{renderImage()}</div>
-      </Hidden>
-      <Hidden only={["xs", "xl"]}>
-        <div className="logo_container">{renderImage()}</div>
-      </Hidden>
-    </div>
-  );
+	return (
+		<div>
+			<Hidden only={[ 'lg', 'md', 'sm', 'xl' ]}>
+				<div className="logo_containers">{renderImage()}</div>
+			</Hidden>
+			<Hidden only={[ 'xs', 'xl' ]}>
+				<div className="logo_container">{renderImage()}</div>
+			</Hidden>
+		</div>
+	);
 };
 
 export default Logo;

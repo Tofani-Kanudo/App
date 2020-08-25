@@ -12,8 +12,6 @@
   overflow-anchor: none;
   overflow-y: hidden;
   min-height: 100vh;
-  padding: 20px 200px;
-  padding-top: 0;
 }
 .company-page-title {
   font-family: Roboto;
@@ -43,7 +41,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: left;
-  max-width: 100%;
 }
 
 .card-title {
@@ -51,7 +48,7 @@
   font-style: normal;
   font-weight: 500;
   font-size: 20px;
-  line-height: 28px;
+  line-height: 1.5rem;
   letter-spacing: 0.04em;
   color: #0f0f21;
 }
@@ -219,8 +216,8 @@ option {
   width: fit-content;
   justify-content: left;
   text-align: center;
-  padding-top: 15px;
-  height: 80px;
+  padding-top: 0px;
+  height: 6.5rem;
   overflow: hidden;
 }
 
@@ -269,7 +266,7 @@ option {
   border-radius: 100%;
 }
 .stack {
-  margin: 2px;
+  margin-right: 3px;
   height: 26px;
   background: #ffffff;
   box-sizing: border-box;
@@ -281,10 +278,10 @@ option {
   grid-template-columns: auto;
 
   border: 1px solid #dbd8e1;
-  margin-bottom: 6px;
+  margin-bottom: 3px;
 }
 .stack-text {
-  padding: 2px;
+  padding: 3px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -296,6 +293,7 @@ option {
   letter-spacing: 0.07em;
   color: #656574;
   padding-top: 0;
+  padding-bottom: 3px;
 }
 .select-form {
   border: none;
@@ -366,7 +364,7 @@ select {
   }
   .card-container {
     width: 453px;
-    height: 243px;
+    height: 240px;
   }
 }
 
@@ -377,21 +375,21 @@ select {
   .card-container {
     cursor: pointer;
     border-radius: 50px;
-    width: 340px;
-    height: 243px;
-    /* height: 219px; */
+    width: 320px;
+    height: auto;
     border-radius: 16px;
     border: #e6e6ff;
-    /* padding: 20px;*/
-    margin: 5px;
-    box-shadow: 0 0 20px 1px rgba(117, 117, 117, 0.3);
+    /* padding: 20px; */
+    margin: 7px;
+    box-shadow: 0 0.8rem 20px 1px rgba(117, 117, 117, 0.3);
+    padding: 1.25rem 1rem;
   }
   .companies {
     padding: 0 !important;
   }
   .company-image {
-    width: 54px;
-    height: 54px;
+    width: 56px;
+    height: 56px;
     border-radius: 13px;
     margin: 0;
   }
@@ -408,7 +406,8 @@ select {
     align-items: center;
     justify-content: center;
   }
-  .show-more:active {
+
+  .show-more:active{
     text-decoration: none;
   }
 
@@ -421,9 +420,9 @@ select {
     width: 100%;
   }
   .tech-stacks {
-    height: 70px;
+    height: auto;
     overflow: hidden;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     padding-top: 0;
   }
 
@@ -468,7 +467,10 @@ select {
     text-align: center;
     letter-spacing: 0.07em;
     color: #656574;
-    font-weight: 600;
+    font-weight: 500;
+    flex: none;
+    align-self: center;
+    font-style: normal;
   }
   .first-svg {
     display: none;
@@ -495,4 +497,9 @@ select {
     padding: 20px;
     margin-bottom: 30px;
   }
+} 
+@media screen and (min-width: 1800px) {
+	* {
+		font-size: 1rem;
+	}
 }

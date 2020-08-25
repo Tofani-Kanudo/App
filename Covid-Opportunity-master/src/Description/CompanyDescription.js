@@ -9,7 +9,7 @@ import Modal from "./Modal";
 function CompanyDescription(props) {
   return (
     <div>
-      <div classname="company-description-container">
+      <div className="company-description-container">
         <Hidden only={["xs"]}>
           <div
             className="back-button"
