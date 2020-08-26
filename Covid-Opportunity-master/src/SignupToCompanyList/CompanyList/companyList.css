@@ -100,7 +100,7 @@ option {
   transition: all 0.2s ease-in-out;
 }
 .card-container:hover {
-  margin-top: -0.1px;
+  margin-top: 10px;
 }
 .company-logo {
   justify-self: start;

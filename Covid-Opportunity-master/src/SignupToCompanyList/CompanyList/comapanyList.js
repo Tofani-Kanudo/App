@@ -210,8 +210,6 @@ class CompanyList extends Component {
     // React.initializeTouchEvents(true);
     // get company list from backend
     // var token= JSON.parse(localStorage.getItem('token'))
-    var token = sessionStorage.getItem("token");
-    if (token==null){
       axios.post("https://api.covid-careers.com/api/token/", {
 			email: "yashesh.mankad06@gmail.com",
 			password: "1234",
@@ -224,7 +222,6 @@ class CompanyList extends Component {
 		  .catch((err) => {
 			console.log(err.message);
 			  });
-    }
     var token = sessionStorage.getItem("token");
     // console.log(token)
     axios

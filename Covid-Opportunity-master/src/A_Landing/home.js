@@ -22,21 +22,6 @@ import wechat from './img/wechat.svg';
 import line from './img/line.svg';
 
 class Home extends React.Component {
-	handleSubmit = (e) => {
-		//post api call to backend
-		axios.post("https://api.covid-careers.com/api/token/", {
-			email: "yashesh.mankad06@gmail.com",
-			password: "1234",
-		  })
-		  .then((res) => {
-			console.log(res.data.access);
-			var token = res.data.access;
-			sessionStorage.setItem("token", token);
-		  })
-		  .catch((err) => {
-			console.log(err.message);
-			  });
-		  };
 	render() {
 		return (
 			<div class="container">
@@ -46,7 +31,7 @@ class Home extends React.Component {
 						<span>Submit your profile and get connected with companies.</span>
 						<br />
 						<Link to={"/companyList"}>
-							<button class="heading__button" onClick={this.handleSubmit}>View Companies</button>
+							<button class="heading__button">View Companies</button>
 						</Link>
 					</div>
 					<div class="texta__illust">
@@ -886,7 +871,7 @@ class Home extends React.Component {
 					<div class="texta4__text">
 						<h1 class="texta4__heading">Let the Companies Hunt You!!</h1>
 					<Link to="/companyList">
-						<button class="texta4__button"  onClick={this.handleSubmit}>Get started</button>
+						<button class="texta4__button">Get started</button>
 					</Link>
 					</div>
 					<div class="texta4__bg">
